@@ -26,6 +26,18 @@ public class Person {
      */
 
     public Person(String name, int age, String gender) {
+        if (!name.equals("Male") && !name.equals("Female")) {
+            throw new IncorrectGenderException("Incorrect gender");
+        }
+
+        if (age < 0 || age > 120) {
+            throw new IncorrectAgeException("Incorrect age");
+        }
+
+        if (name.equals("")) {
+            throw new IncorrectNameException("Name cannot be empty");
+        }
+
         this.name = name;
         this.age = age;
         this.gender = gender;
