@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -12,8 +13,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * @author Miguel Angel Cosano Ramirez
  */
 class PersonTest {
-    Person person;
-
 
     @Test
     void createPersonWithEmptyName() {
@@ -36,14 +35,12 @@ class PersonTest {
         assertThrows(IncorrectGenderException.class, () -> new Person("Prueba",1,"IncorrectGender"));
 
     }
-
+    @Test
+    void getEverageFromNullPersonList() {
+        assertThrows(NullPersonListException.class, () -> Person.everageAgePerGender(null));
+    }
     @Test
     void getEverageFromEmptyPersonList() {
-
-    }
-
-    @Test
-    void getEverageFromPersonListWithOnePerson() {
         List<Person> personList = new ArrayList<>();
         double[] expectedValue = {0, 0};
         double[] obtainedValue = Person.everageAgePerGender(personList);
@@ -51,8 +48,68 @@ class PersonTest {
     }
 
     @Test
-    void getEverageFromPersonListWithTwoPerson() {
+    void getEverageFromPersonListWithOneFemale() {
+        List<Person> personList = new ArrayList<>();
+        Person female = new Person("Test",24,"Female");
+        personList.add(female);
+        double[] expectedValue = {0, 24};
+        double[] obtainedValue = Person.everageAgePerGender(personList);
+        assertArrayEquals(expectedValue, obtainedValue);
     }
+
+    @Test
+    void getEverageFromPersonListWithOneMale() {
+        List<Person> personList = new ArrayList<>();
+        Person male = new Person("Test",24, "Male");
+        personList.add(male);
+        double[] expectedValue = {24, 0};
+        double[] obtainedValue = Person.everageAgePerGender(personList);
+        assertArrayEquals(expectedValue, obtainedValue);
+    }
+
+    @Test
+    void getEverageFromPersonListWithTwoPerson() {
+        List<Person> personList = new ArrayList<>();
+        Person male = new Person("Test",24, "Male");
+        Person female = new Person("Test",24, "Female");
+        personList.add(female);
+        personList.add(male);
+        double[] expectedValue = {24, 24};
+        double[] obtainedValue = Person.everageAgePerGender(personList);
+        assertArrayEquals(expectedValue, obtainedValue);
+    }
+
+    @Test
+    void getEverageFromPersonListWithThreePerson() {
+        List<Person> personList = new ArrayList<>();
+        Person male = new Person("Test",24, "Male");
+        Person male2 = new Person("Test",26, "Male");
+        Person female = new Person("Test",24, "Female");
+        personList.add(female);
+        personList.add(male);
+        personList.add(male2);
+        double[] expectedValue = {25, 24};
+        double[] obtainedValue = Person.everageAgePerGender(personList);
+        assertArrayEquals(expectedValue, obtainedValue);
+    }
+
+    @Test
+    void getEverageFromPersonListWithFourPerson() {
+        List<Person> personList = new ArrayList<>();
+        Person male = new Person("Test",24, "Male");
+        Person male2 = new Person("Test",26, "Male");
+        Person female = new Person("Test",20, "Female");
+        Person female2 = new Person("Test",10, "Female");
+        personList.add(female);
+        personList.add(male);
+        personList.add(male2);
+        personList.add(female2);
+        double[] expectedValue = {25, 15};
+        double[] obtainedValue = Person.everageAgePerGender(personList);
+        assertArrayEquals(expectedValue, obtainedValue);
+    }
+
+
 
 
 }
