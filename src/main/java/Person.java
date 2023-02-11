@@ -26,7 +26,7 @@ public class Person {
      */
 
     public Person(String name, int age, String gender) {
-        if (!gender.equals("Male") && !gender.equals("Female")) {
+        if (!gender.toLowerCase().equals("male") && !gender.toLowerCase().equals("female")) {
             throw new IncorrectGenderException("Incorrect gender");
         }
 
