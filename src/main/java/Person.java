@@ -67,7 +67,34 @@ public class Person {
      * @param persons return
      **/
     public double[] everageAgePerGender(List<Person> persons) {
-        return null;
+        int sumFemale = 0;
+        int numFemale = 0;
+
+        int sumMale = 0;
+        int numMale = 0;
+        for (Person p : persons) {
+            if (p.gender.equals("Male")) {
+                sumMale += p.age;
+                numMale += 1;
+            } else {
+                sumFemale += p.age;
+                numFemale += 1;
+            }
+        }
+        double[] res = new double[1];
+        if (numMale == 0) {
+            res[0] = 0;
+        } else {
+            res[0] = sumMale / numMale;
+        }
+        if (numFemale == 0) {
+            res[1] = 0;
+        } else {
+            res[1] = sumFemale / numFemale;
+        }
+
+        return res;
+
     }
 }
 
