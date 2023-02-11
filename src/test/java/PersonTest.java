@@ -68,7 +68,7 @@ class PersonTest {
     }
 
     @Test
-    void getEverageFromPersonListWithTwoPerson() {
+    void getEverageFromPersonListWithTwoPeople() {
         List<Person> personList = new ArrayList<>();
         Person male = new Person("Test",24, "Male");
         Person female = new Person("Test",24, "Female");
@@ -80,7 +80,7 @@ class PersonTest {
     }
 
     @Test
-    void getEverageFromPersonListWithThreePerson() {
+    void getEverageFromPersonListWithThreePeople() {
         List<Person> personList = new ArrayList<>();
         Person male = new Person("Test",24, "Male");
         Person male2 = new Person("Test",26, "Male");
@@ -94,7 +94,7 @@ class PersonTest {
     }
 
     @Test
-    void getEverageFromPersonListWithFourPerson() {
+    void getEverageFromPersonListWithFourPeople() {
         List<Person> personList = new ArrayList<>();
         Person male = new Person("Test",24, "Male");
         Person male2 = new Person("Test",26, "Male");
@@ -105,6 +105,24 @@ class PersonTest {
         personList.add(male2);
         personList.add(female2);
         double[] expectedValue = {25, 15};
+        double[] obtainedValue = Person.everageAgePerGender(personList);
+        assertArrayEquals(expectedValue, obtainedValue);
+    }
+
+    @Test
+    void getEverageFromPersonListWithFivePeople() {
+        List<Person> personList = new ArrayList<>();
+        Person male = new Person("Test",24, "Male");
+        Person male2 = new Person("Test",26, "Male");
+        Person female = new Person("Test",20, "Female");
+        Person female2 = new Person("Test",10, "Female");
+        Person  female3 = new Person("Test", 90, "Female");
+        personList.add(female);
+        personList.add(male);
+        personList.add(male2);
+        personList.add(female2);
+        personList.add(female3);
+        double[] expectedValue = {25, 40};
         double[] obtainedValue = Person.everageAgePerGender(personList);
         assertArrayEquals(expectedValue, obtainedValue);
     }
