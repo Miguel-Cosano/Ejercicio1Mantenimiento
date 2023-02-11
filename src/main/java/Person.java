@@ -26,7 +26,7 @@ public class Person {
      */
 
     public Person(String name, int age, String gender) {
-        if (!name.equals("Male") && !name.equals("Female")) {
+        if (!gender.equals("Male") && !gender.equals("Female")) {
             throw new IncorrectGenderException("Incorrect gender");
         }
 
@@ -66,7 +66,7 @@ public class Person {
      *
      * @param persons return
      **/
-    public double[] everageAgePerGender(List<Person> persons) {
+    public static double[] everageAgePerGender(List<Person> persons) {
         int sumFemale = 0;
         int numFemale = 0;
 
@@ -81,7 +81,7 @@ public class Person {
                 numFemale += 1;
             }
         }
-        double[] res = new double[1];
+        double[] res = new double[2];
         if (numMale == 0) {
             res[0] = 0;
         } else {
