@@ -9,3 +9,8 @@ Podemos observar que se cubre el 100% del codigo que contiene la clase Persona
 
 Adjunto imagen del comando merge que se llevo a cabo para llevar el contenido de la rama development a la rama main:
 ![Merge en main de lo que habia en development](https://user-images.githubusercontent.com/80314332/218811252-88f1c382-fdb9-4245-b2a7-9bddb0a43b74.jpg)
+
+Adjunto imagen del grafo de secuencia de commits:
+![image](https://user-images.githubusercontent.com/80314332/218811753-6b26f3f8-3443-46f4-a172-75007f901ba4.png)
+
+**Originalmente el respositorio fue iniciado de forma local en una rama llamada master , una vez subido a github el contenido de la rama master paso a la rama main y la rama master fue eliminada. Que es lo que podemos observar al princio del grafo.
