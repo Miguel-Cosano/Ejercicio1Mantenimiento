@@ -11,7 +11,7 @@ Adjunto imagen del comando merge que se llevo a cabo para llevar el contenido de
 ![Merge en main de lo que habia en development](https://user-images.githubusercontent.com/80314332/218811252-88f1c382-fdb9-4245-b2a7-9bddb0a43b74.jpg)
 
 Adjunto imagen del grafo de secuencia de commits:
-![image](https://user-images.githubusercontent.com/80314332/219077524-337d81c4-21db-4b15-8ec6-0705cae7c451.png)
+![image](https://user-images.githubusercontent.com/80314332/219080776-33681782-f49d-497c-8947-b55ce6c50758.png)
 
 
 Aplicando lo visto en clase y en las practicas he añadido el plugin de jacoco para cercionarme de que se cumpla que cubre todo lo necesario, obteniendo el siguiente resultado:
