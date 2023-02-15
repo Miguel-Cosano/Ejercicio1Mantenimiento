@@ -23,6 +23,11 @@ public class Person {
      * @param age    the age of the person
      *               .
      * @param gender the gender of the person
+     *
+     * Considers the following exceptions:
+     * IncorrectNameException if the name is empty
+     * IncorrectAgeException if the age is negative or greater than 120
+     * IncorrectGenderException if the gender is not equal to female or male
      */
 
     public Person(String name, int age, String gender) {
