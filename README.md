@@ -13,4 +13,10 @@ Adjunto imagen del comando merge que se llevo a cabo para llevar el contenido de
 Adjunto imagen del grafo de secuencia de commits:
 ![image](https://user-images.githubusercontent.com/80314332/218811753-6b26f3f8-3443-46f4-a172-75007f901ba4.png)
 
+Aplicando lo visto en clase y en las practicas he añadido el plugin de jacoco para cercionarme de que se cumpla que cubre todo lo necesario, obteniendo el siguiente resultado:
+![image](https://user-images.githubusercontent.com/80314332/219077045-977008f7-1725-4958-a982-f2cbf0796240.png)
+
+Podemos observar que nuestros test cubren el 100% de los casos salvo en los get los cuales no necesitan ser testeados.
+
 **Originalmente el respositorio fue iniciado de forma local en una rama llamada master , una vez subido a github el contenido de la rama master paso a la rama main y la rama master fue eliminada. Que es lo que podemos observar al princio del grafo.
+
