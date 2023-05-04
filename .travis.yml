@@ -1,6 +1,4 @@
 language: java
-rvm:
-  - 19.0.2
 jdk:
   - openjdk19
 sudo: false
