@@ -72,9 +72,9 @@ public class Person {
      * @param persons return
      **/
     public static double[] everageAgePerGender(List<Person> persons) {
-        if (persons == null) {
-            throw new NullPersonListException("List cannot be null");
-        }
+        //if (persons == null) {
+        //    throw new NullPersonListException("List cannot be null");
+        //}
         int sumFemale = 0;
         int numFemale = 0;
 
@@ -105,4 +105,8 @@ public class Person {
 
     }
 }
+/*
+
+dsadasjdnaskjdnas
+ */
 
